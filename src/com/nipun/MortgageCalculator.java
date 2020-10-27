@@ -66,22 +66,19 @@ public class MortgageCalculator implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent event){
+
         final int monthsInAYear = 12;
         final int percentage = 100;
         int principal;
         float interestRate;
         float duration;
-        String principalString, interestRateString, durationString;
 
-        principalString = principalText.getText().trim();
-        principal = Integer.parseInt(principalString);
+        principal = Integer.parseInt(principalText.getText().trim());
 
-        interestRateString = interestText.getText().trim();
-        interestRate = Float.parseFloat(interestRateString);
+        interestRate = Float.parseFloat(interestText.getText().trim());
         float monthlyInterestRate = interestRate / percentage / monthsInAYear;
 
-        durationString = durationText.getText().trim();
-        duration = Float.parseFloat(durationString);
+        duration = Float.parseFloat(durationText.getText().trim());
         float monthlyDuration = (Math.round(duration)) * monthsInAYear;
 
         if(principal < 1_000 || principal > 1_000_000){
