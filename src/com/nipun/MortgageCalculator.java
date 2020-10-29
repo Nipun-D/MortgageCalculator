@@ -60,11 +60,9 @@ public class MortgageCalculator implements ActionListener {
         panel.add(repaymentLabel);
         frame.setVisible(true);
 
-        /*if (principalText.getText().isEmpty() || interestText.getText().isEmpty() || durationText.getText().isEmpty())
-            repaymentLabel.setText("Please enter a value for either Principal/Interest Rate/Duration");
-        */
     }
 
+    @Override
     public void actionPerformed(ActionEvent event){
 
         final int monthsInAYear = 12;
